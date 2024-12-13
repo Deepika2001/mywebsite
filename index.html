@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flavours of Home | Taste the Tradition</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="nav">
+    <div class="logo">Flavours of Home</div>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#recipe-book">Recipe Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <header>
+    <div class="container">
+      <h1>Flavours of Home</h1>
+      <h2>Taste the Tradition</h2>
+    </div>
+  </header>
+  <!-- Home-->
+  <section id="home">
+    <div class="container">
+      <img src="images/Homepage2.jpeg" alt="About Flavours of Home" />
+      <div class="home-content">
+        <h2>Welcome to Flavours of Home</h2>
+        <h3>Experience the joy of authentic and traditional recipes from our kitchen to yours.</h3>
+        <div>
+          <h2>Taste the Tradition</h2>
+          <p>
+            Recipes, cooking techniques, and food stories. Experience the vibrant and soulful world of Nepali
+            cuisine, where every dish tells a story and every recipe brings the taste of tradition to life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <div class="about-content">
+        <div class="about-img">
+          <img src="images/Heritage.png" alt="About Flavours of Home" width=" 100%" />
+        </div>
+        <div>
+          <p>
+            At Flavours of Home, we bring the taste of tradition to your table. From handmade Momos to the hearty
+            Thakali
+            Khana, each recipe reflects a story of heritage and love.
+          </p>
+
+
+          <p>
+            Nepal is a land of diverse cultures, breathtaking landscapes, and, most importantly, flavourful dishes that
+            tell the stories of its people. At Flavours of Home, we’re dedicated to sharing the heart and soul of Nepali
+            cuisine. From the vibrant spices of our curries to the delicate flavours of traditional dumplings, we bring
+            you
+            the authentic tastes that define Nepal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipe Book Section -->
+  <section id="recipe-book">
+    <div class="container">
+      <h2>Recipe Book</h2>
+      <div class="menu-list">
+        <div class="menu-item">
+          <img src="images/momo.png" alt="Momo" />
+          <h3>Momo</h3>
+          <p>Steamed dumplings filled with flavorful meat or veggies, served with spicy chutney.</p>
+          <button class="recipe-button" data-target="momo-recipe">View Recipe</button>
+          <div id="momo-recipe" class="recipe-details">
+            <strong>Ingredients:</strong> Flour, ground meat/veggies, garlic, ginger, spices.<br />
+            <strong>Steps:</strong> Make dough, prepare filling, shape dumplings, steam, and serve with chutney.
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="images/Thakali.png" alt="Thakali Khana" />
+          <h3>Thakali Khana</h3>
+          <p>A traditional platter of rice, lentils, and curries, served with pickles and greens.</p>
+          <button class="recipe-button" data-target="thakali-recipe">View Recipe</button>
+          <div id="thakali-recipe" class="recipe-details">
+            <strong>Ingredients:</strong> Rice, lentils, vegetables, spices, pickles.<br />
+            <strong>Steps:</strong> Cook rice and lentils, prepare curries and pickles, and serve on a platter.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: info@flavoursofhome.com</p>
+      <p>Phone: +61435000000</p>
+      <p>Address: Sydney, Australia</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Flavours of Home. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to toggle recipe details visibility
+    document.querySelectorAll('.recipe-button').forEach(button => {
+      button.addEventListener('click', function() {
+        const targetId=this.getAttribute('data-target');
+        const recipeDetails=document.getElementById(targetId);
+        if (recipeDetails.style.display==='none'||recipeDetails.style.display==='') {
+          recipeDetails.style.display='block';
+        } else {
+          recipeDetails.style.display='none';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
